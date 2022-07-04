@@ -4,32 +4,6 @@
   
   
   <entry>
-    <title>new post</title>
-    <link href="/2022/07/01/new-post/"/>
-    <url>/2022/07/01/new-post/</url>
-    
-    <content type="html"><![CDATA[<p>this is a test<br>doing nothing<br><br/><br>ok<br><br/><br>maths test<br>$$<br>\int f’(x)&#x3D;x^2+ \sqrt{x} +\sqrt[3]{x} +x -x<br>$$</p><p>intsert picture test</p><p><img src="/../images/95619535_p0_master1200.jpg" alt="95619535_p0_master1200.jpg"></p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>artcile title</title>
-    <link href="/2022/06/30/artcile-title/"/>
-    <url>/2022/06/30/artcile-title/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Hello World</title>
     <link href="/2022/06/30/hello-world/"/>
     <url>/2022/06/30/hello-world/</url>
