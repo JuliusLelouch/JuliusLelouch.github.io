@@ -4,12 +4,56 @@
   
   
   <entry>
+    <title>leetcode problem.2325 解答</title>
+    <link href="/2022/07/05/blog/leetcode%20problem.2325/"/>
+    <url>/2022/07/05/blog/leetcode%20problem.2325/</url>
+    
+    <content type="html"><![CDATA[<br/>题目链接：https://leetcode.cn/problems/decode-the-message/<br/>个人认为本题难度大致相当于NOIP普及组第二题，难度不及提高组第一题纯模拟，也没有什么更好的算法<br/><p>题目解答如下<br><br/></p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">decodeMessage</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> key, <span class="hljs-built_in">string</span> message</span>)</span> &#123;<br>        <br>        <span class="hljs-built_in">char</span> board[<span class="hljs-number">27</span>]=&#123;<span class="hljs-number">0</span>&#125;;    <span class="hljs-comment">//board[0]代表message中&#x27;a&#x27;对应的字母,board[1]代表message中&#x27;b&#x27;对应的字母，以此类推.....</span><br>        <span class="hljs-built_in">int</span> cnt=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i&lt;key.size();i++)<br>        <span class="hljs-keyword">if</span>(key[i]!=<span class="hljs-string">&#x27; &#x27;</span>)   <span class="hljs-comment">//判断是否为字母</span><br>        &#123;<br>            <span class="hljs-keyword">if</span>(board[key[i]-<span class="hljs-string">&#x27;a&#x27;</span>]==<span class="hljs-number">0</span>)<br>            &#123;<br>                board[key[i]-<span class="hljs-string">&#x27;a&#x27;</span>]=(<span class="hljs-built_in">char</span>)(<span class="hljs-string">&#x27;a&#x27;</span>+cnt);<br>                cnt++;<br>            &#125;<br><br>            <span class="hljs-keyword">if</span>(cnt==<span class="hljs-number">26</span>)<br>                <span class="hljs-keyword">break</span>;<br>        &#125;  <br><br>        <span class="hljs-built_in">string</span> ret=<span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i&lt;message.size();i++)<br>        <span class="hljs-keyword">if</span>(message[i]&gt;=<span class="hljs-string">&#x27;a&#x27;</span> &amp;&amp; message[i]&lt;=<span class="hljs-string">&#x27;z&#x27;</span>)<br>        &#123;<br>            ret+=board[message[i]-<span class="hljs-string">&#x27;a&#x27;</span>];<br>        &#125;<br>        <span class="hljs-keyword">else</span><br>            ret+=message[i];<br><br><br>        <span class="hljs-keyword">return</span> ret;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>leetcode</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>leetcode 计划</title>
+    <link href="/2022/07/05/blog/leetcode%20planning/"/>
+    <url>/2022/07/05/blog/leetcode%20planning/</url>
+    
+    <content type="html"><![CDATA[<p>我一定要每天刷题！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>leetcode</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
-    <link href="/2022/06/30/hello-world/"/>
-    <url>/2022/06/30/hello-world/</url>
+    <link href="/2022/06/30/blog/hello-world/"/>
+    <url>/2022/06/30/blog/hello-world/</url>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
+    
+    <categories>
+      
+      <category>其他</category>
+      
+    </categories>
     
     
   </entry>
